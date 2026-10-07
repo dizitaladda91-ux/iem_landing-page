@@ -1,0 +1,250 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+
+export default function HeroSection() {
+  // Live Countdown state
+  const [timeLeft, setTimeLeft] = useState({
+    days: 38,
+    hours: 14,
+    minutes: 42,
+    seconds: 18,
+  });
+
+  useEffect(() => {
+    // Target: Finale Date Nov 14, 2026
+    const targetDate = new Date("2026-11-14T10:00:00").getTime();
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative bg-surface py-16 sm:py-24 border-b border-border-pink overflow-hidden">
+      {/* Background architectural grid lines - Clean & elegant, no gradients */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="h-full w-full border-x border-border-pink max-w-7xl mx-auto flex justify-between">
+          <div className="w-px h-full bg-border-pink"></div>
+          <div className="w-px h-full bg-border-pink"></div>
+          <div className="w-px h-full bg-border-pink"></div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Editorial Headline & Actions */}
+          <div className="lg:col-span-7 space-y-6">
+            
+            {/* Super Header Tag */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-xs font-bold uppercase tracking-wider text-pink-dark">
+              <span className="w-2 h-2 rounded-full bg-pink-primary animate-ping"></span>
+              OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION
+            </div>
+
+            {/* Main Headline */}
+            <div className="space-y-2">
+              <p className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.3em] text-pink-primary">
+                INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
+              </p>
+              <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-black text-charcoal tracking-tight leading-none uppercase">
+                RUNWAY
+              </h1>
+              <div className="flex items-center gap-4">
+                <span className="font-serif italic text-3xl sm:text-5xl font-light text-pink-primary">
+                  Kids
+                </span>
+                <span className="font-serif text-3xl sm:text-5xl font-extrabold tracking-widest text-charcoal uppercase">
+                  FASHION WEEK
+                </span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-base sm:text-lg text-charcoal-muted max-w-2xl font-normal leading-relaxed">
+              A premier celebration of confidence, style, and stage presence for children 
+              from newborn to Class 5. Complete with portfolio shoots, city tours, 
+              social voting, and a prestigious Mega Finale on Children&apos;s Day.
+            </p>
+
+            {/* Primary Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <a
+                href="#register"
+                className="px-8 py-4 text-center text-sm font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-md hover:shadow-lg active:scale-95"
+              >
+                Nominate Your Child [Free Entry]
+              </a>
+              <a
+                href="#voting"
+                className="px-8 py-4 text-center text-sm font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink hover:bg-pink-soft transition-all rounded shadow-sm hover:shadow"
+              >
+                Participate in Social Voting
+              </a>
+            </div>
+
+            {/* Quick Metrics Bar */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border-pink">
+              <div className="bg-white p-3 rounded border border-border-pink">
+                <div className="text-2xl font-serif font-black text-charcoal">4</div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+                  Age Categories
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded border border-border-pink">
+                <div className="text-2xl font-serif font-black text-pink-primary">₹21,000</div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+                  Cash Award
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded border border-border-pink">
+                <div className="text-2xl font-serif font-black text-charcoal">26 OCT</div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+                  Mega Audition
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded border border-border-pink">
+                <div className="text-2xl font-serif font-black text-pink-primary">14 NOV</div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+                  Grand Finale
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column: High-Fashion Event Card & Live Countdown */}
+          <div className="lg:col-span-5 relative">
+            
+            {/* Floating Top Badge - CSS Float Animation */}
+            <div className="absolute -top-6 -right-2 z-20 bg-white border border-border-pink px-4 py-2 rounded shadow-md animate-float hidden sm:block">
+              <div className="text-[10px] font-black uppercase tracking-widest text-pink-primary">
+                WILD CARD ENTRY
+              </div>
+              <div className="text-xs font-bold text-charcoal">
+                2 Direct Entries via Voting
+              </div>
+            </div>
+
+            {/* Main Showcase Panel */}
+            <div className="bg-white border-2 border-border-pink rounded-xl p-6 sm:p-8 shadow-lg relative">
+              
+              {/* Event Badge Header */}
+              <div className="flex justify-between items-center pb-5 border-b border-border-pink">
+                <div>
+                  <span className="text-[10px] font-extrabold tracking-widest uppercase bg-pink-soft text-pink-dark px-2.5 py-1 rounded">
+                    OFFICIAL EVENT BRIEF
+                  </span>
+                  <h3 className="text-xl font-serif font-bold text-charcoal mt-2">
+                    Grand Children&apos;s Day Finale
+                  </h3>
+                </div>
+                <div className="text-right">
+                  <span className="text-xs font-bold text-charcoal block">14 Nov 2026</span>
+                  <span className="text-[11px] font-medium text-charcoal-muted">Lucknow, UP</span>
+                </div>
+              </div>
+
+              {/* Countdown Clock Display - Solid blocks, no gradients */}
+              <div className="py-6">
+                <div className="text-xs font-bold uppercase tracking-wider text-charcoal-muted mb-3 text-center">
+                  COUNTDOWN TO THE RUNWAY FINALE
+                </div>
+                <div className="grid grid-cols-4 gap-2 text-center">
+                  <div className="bg-surface border border-border-pink p-3 rounded">
+                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                      {timeLeft.days}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase text-charcoal-muted">Days</span>
+                  </div>
+                  <div className="bg-surface border border-border-pink p-3 rounded">
+                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                      {timeLeft.hours}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase text-charcoal-muted">Hours</span>
+                  </div>
+                  <div className="bg-surface border border-border-pink p-3 rounded">
+                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                      {timeLeft.minutes}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase text-charcoal-muted">Mins</span>
+                  </div>
+                  <div className="bg-surface border border-border-pink p-3 rounded">
+                    <span className="text-2xl sm:text-3xl font-black font-serif text-pink-primary block">
+                      {timeLeft.seconds}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase text-pink-dark">Secs</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Highlights Feature List */}
+              <div className="space-y-3 pt-2 border-t border-border-pink">
+                <div className="flex items-start gap-3">
+                  <span className="text-xs font-black text-pink-primary bg-pink-soft px-2 py-0.5 rounded">
+                    01
+                  </span>
+                  <div className="text-xs text-charcoal leading-tight">
+                    <strong className="font-bold">Fashion on Wheels:</strong> City-wide branded open bus roadshow with participants and mentors.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-xs font-black text-pink-primary bg-pink-soft px-2 py-0.5 rounded">
+                    02
+                  </span>
+                  <div className="text-xs text-charcoal leading-tight">
+                    <strong className="font-bold">Professional Photoshoot:</strong> Portfolio album &amp; opportunity to become the face of partner brands.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-xs font-black text-pink-primary bg-pink-soft px-2 py-0.5 rounded">
+                    03
+                  </span>
+                  <div className="text-xs text-charcoal leading-tight">
+                    <strong className="font-bold">Social Media Voting:</strong> High-engagement creatives qualify directly for Wild Card entry.
+                  </div>
+                </div>
+              </div>
+
+              {/* Instant Registration Jump CTA */}
+              <div className="mt-6 pt-4 border-t border-border-pink">
+                <a
+                  href="#register"
+                  className="w-full block py-3 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
+                >
+                  Start Registration &amp; Generate Card &rarr;
+                </a>
+              </div>
+
+            </div>
+
+            {/* Floating Bottom Badge */}
+            <div className="absolute -bottom-5 -left-4 z-20 bg-white border border-border-pink px-4 py-2 rounded shadow-md animate-float-reverse hidden sm:block">
+              <div className="text-[10px] font-black uppercase tracking-widest text-charcoal">
+                AUDITION VENUE
+              </div>
+              <div className="text-xs font-bold text-pink-primary">
+                Jashn Realty, Lucknow
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

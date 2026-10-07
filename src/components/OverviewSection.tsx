@@ -1,0 +1,103 @@
+"use client";
+
+import React from "react";
+
+export default function OverviewSection() {
+  const pillars = [
+    {
+      num: "01",
+      title: "Stage Confidence & Self-Expression",
+      desc: "Designed to help kids overcome stage fright, build poise, and experience the thrill of performing in front of an appreciative audience.",
+      tag: "EMPOWERMENT",
+    },
+    {
+      num: "02",
+      title: "Professional Grooming & Workshops",
+      desc: "Expert choreographers and trainers guide children with etiquette, basic ramp walks, expressions, and posture suitable for their age.",
+      tag: "TRAINING",
+    },
+    {
+      num: "03",
+      title: "Designer Showcases & Brand Tie-ups",
+      desc: "Leading kidswear labels, fashion institutes, and lifestyle designers showcase their collections, offering kids direct industry exposure.",
+      tag: "OPPORTUNITY",
+    },
+    {
+      num: "04",
+      title: "Unforgettable Family Bonding",
+      desc: "Special parent-child rounds, entertainment tours, and high-quality portfolio keepsakes ensure memories that last a lifetime.",
+      tag: "MEMORIES",
+    },
+  ];
+
+  return (
+    <section id="overview" className="py-20 bg-white border-b border-border-pink">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16">
+          <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
+            ABOUT THE MOVEMENT
+          </div>
+          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+            Nurturing Young Stars, Celebrating Individuality
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-charcoal-muted leading-relaxed">
+            The Kids Fashion Week is a multi-day celebration of style, confidence, and creativity for children. 
+            It provides a glamorous, respectful platform for kids of all age groups to shine on the runway — 
+            from newborns in strollers to energetic pre-teens — while giving brands and designers 
+            a dedicated stage in the kidswear segment.
+          </p>
+        </div>
+
+        {/* 4 Pillars Grid - Solid cards, no icons */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pillars.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-surface border border-border-pink p-8 rounded-xl hover:border-pink-primary transition-all duration-300 hover:-translate-y-1 group"
+            >
+              <div className="flex justify-between items-start mb-6">
+                <span className="font-serif text-4xl font-black text-pink-primary">
+                  {item.num}
+                </span>
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-pink-dark bg-white border border-border-pink px-2.5 py-1 rounded">
+                  {item.tag}
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-charcoal mb-3 group-hover:text-pink-primary transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-sm text-charcoal-muted leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mission Statement Box */}
+        <div className="mt-12 bg-pink-light border border-border-pink rounded-xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2">
+            <span className="text-xs font-extrabold tracking-widest uppercase text-pink-primary">
+              CORE PHILOSOPHY
+            </span>
+            <h4 className="font-serif text-2xl font-bold text-charcoal">
+              &ldquo;Tiny Trendsetters, Big Runway Dreams!&rdquo;
+            </h4>
+            <p className="text-sm text-charcoal-muted max-w-2xl">
+              Every child is a star. Our screening and audition processes are structured around comfort, 
+              encouragement, and constructive development, without undue pressure or harsh elimination.
+            </p>
+          </div>
+          <a
+            href="#categories"
+            className="whitespace-nowrap px-6 py-3 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
+          >
+            Explore Categories &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
