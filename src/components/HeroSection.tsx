@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import HeroGalleryCarousel from "@/components/HeroGalleryCarousel";
 
 export default function HeroSection() {
   // Live Countdown state
@@ -44,37 +45,37 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-7 space-y-6">
             
             {/* Super Header Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-xs font-bold uppercase tracking-wider text-pink-dark">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider text-pink-dark max-w-full">
               <span className="w-2 h-2 rounded-full bg-pink-primary animate-ping"></span>
-              OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION
+              <span className="leading-relaxed">OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-2">
-              <p className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.3em] text-pink-primary">
+              <p className="text-[10px] sm:text-sm font-extrabold uppercase tracking-[0.18em] sm:tracking-[0.3em] text-pink-primary leading-relaxed">
                 INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
               </p>
-              <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-black text-charcoal tracking-tight leading-none uppercase">
+              <h1 className="font-serif text-4xl sm:text-7xl lg:text-8xl font-black text-charcoal tracking-tight leading-[0.9] uppercase">
                 RUNWAY
               </h1>
-              <div className="flex items-center gap-4">
-                <span className="font-serif italic text-3xl sm:text-5xl font-light text-pink-primary">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <span className="font-serif italic text-2xl sm:text-5xl font-light text-pink-primary leading-none">
                   Kids
                 </span>
-                <span className="font-serif text-3xl sm:text-5xl font-extrabold tracking-widest text-charcoal uppercase">
+                <span className="font-serif text-2xl sm:text-5xl font-extrabold tracking-widest text-charcoal uppercase leading-none">
                   FASHION WEEK
                 </span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-charcoal-muted max-w-2xl font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl font-normal leading-relaxed">
               A premier celebration of confidence, style, and stage presence for children 
               from newborn to Class 5. Complete with portfolio shoots, city tours, 
               social voting, and a prestigious Mega Finale on Children&apos;s Day.
@@ -84,20 +85,20 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <a
                 href="#register"
-                className="px-8 py-4 text-center text-sm font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-md hover:shadow-lg active:scale-95"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-md hover:shadow-lg active:scale-95"
               >
                 Nominate Your Child [Free Entry]
               </a>
               <a
                 href="#voting"
-                className="px-8 py-4 text-center text-sm font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink hover:bg-pink-soft transition-all rounded shadow-sm hover:shadow"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink hover:bg-pink-soft transition-all rounded shadow-sm hover:shadow"
               >
                 Participate in Social Voting
               </a>
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border-pink">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-border-pink">
               <div className="bg-white p-3 rounded border border-border-pink">
                 <div className="text-2xl font-serif font-black text-charcoal">4</div>
                 <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
@@ -126,64 +127,54 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: High-Fashion Event Card & Live Countdown */}
-          <div className="lg:col-span-5 relative">
-            
-            {/* Floating Top Badge - CSS Float Animation */}
-            <div className="absolute -top-6 -right-2 z-20 bg-white border border-border-pink px-4 py-2 rounded shadow-md animate-float hidden sm:block">
-              <div className="text-[10px] font-black uppercase tracking-widest text-pink-primary">
-                WILD CARD ENTRY
-              </div>
-              <div className="text-xs font-bold text-charcoal">
-                2 Direct Entries via Voting
-              </div>
-            </div>
+          {/* Right Column: Photo Gallery & Live Countdown */}
+          <div className="lg:col-span-5 relative space-y-5">
+            <HeroGalleryCarousel />
 
-            {/* Main Showcase Panel */}
-            <div className="bg-white border-2 border-border-pink rounded-xl p-6 sm:p-8 shadow-lg relative">
+            <div className="bg-white border border-border-pink rounded-xl p-5 sm:p-6 shadow-lg relative">
               
               {/* Event Badge Header */}
-              <div className="flex justify-between items-center pb-5 border-b border-border-pink">
+              <div className="flex flex-wrap justify-between items-start gap-3 pb-5 border-b border-border-pink">
                 <div>
                   <span className="text-[10px] font-extrabold tracking-widest uppercase bg-pink-soft text-pink-dark px-2.5 py-1 rounded">
                     OFFICIAL EVENT BRIEF
                   </span>
-                  <h3 className="text-xl font-serif font-bold text-charcoal mt-2">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal mt-2">
                     Grand Children&apos;s Day Finale
                   </h3>
                 </div>
-                <div className="text-right">
+                <div className="text-left sm:text-right">
                   <span className="text-xs font-bold text-charcoal block">14 Nov 2026</span>
                   <span className="text-[11px] font-medium text-charcoal-muted">Lucknow, UP</span>
                 </div>
               </div>
 
               {/* Countdown Clock Display - Solid blocks, no gradients */}
-              <div className="py-6">
-                <div className="text-xs font-bold uppercase tracking-wider text-charcoal-muted mb-3 text-center">
+              <div className="py-5">
+                <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-charcoal-muted mb-3 text-center">
                   COUNTDOWN TO THE RUNWAY FINALE
                 </div>
                 <div className="grid grid-cols-4 gap-2 text-center">
-                  <div className="bg-surface border border-border-pink p-3 rounded">
-                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
+                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
                       {timeLeft.days}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Days</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-3 rounded">
-                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
+                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
                       {timeLeft.hours}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Hours</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-3 rounded">
-                    <span className="text-2xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
+                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
                       {timeLeft.minutes}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Mins</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-3 rounded">
-                    <span className="text-2xl sm:text-3xl font-black font-serif text-pink-primary block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
+                    <span className="text-xl sm:text-3xl font-black font-serif text-pink-primary block">
                       {timeLeft.seconds}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-pink-dark">Secs</span>
@@ -229,16 +220,6 @@ export default function HeroSection() {
                 </a>
               </div>
 
-            </div>
-
-            {/* Floating Bottom Badge */}
-            <div className="absolute -bottom-5 -left-4 z-20 bg-white border border-border-pink px-4 py-2 rounded shadow-md animate-float-reverse hidden sm:block">
-              <div className="text-[10px] font-black uppercase tracking-widest text-charcoal">
-                AUDITION VENUE
-              </div>
-              <div className="text-xs font-bold text-pink-primary">
-                Jashn Realty, Lucknow
-              </div>
             </div>
 
           </div>

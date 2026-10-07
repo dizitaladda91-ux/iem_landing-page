@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-charcoal">
+    <main className="min-h-screen bg-white pb-24 text-charcoal md:pb-0">
       {/* 1. Sticky Navigation Header */}
       <Header />
 

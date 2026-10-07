@@ -111,7 +111,7 @@ export default function PrizesSection() {
           </div>
           <a
             href="#register"
-            className="whitespace-nowrap px-6 py-3.5 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
+            className="w-full sm:w-auto text-center px-6 py-3.5 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
           >
             Nominate Today &rarr;
           </a>

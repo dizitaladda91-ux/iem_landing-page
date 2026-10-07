@@ -108,7 +108,7 @@ export default function ScheduleFlowSection() {
         </div>
 
         {/* Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {steps.map((st, idx) => {
             const isHighlight = idx === 1 || idx === 7; // Audition & Finale
             const isSelected = selectedStep === idx;
@@ -183,7 +183,7 @@ export default function ScheduleFlowSection() {
           <div className="flex gap-3">
             <a
               href="#register"
-              className="px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors whitespace-nowrap"
+              className="w-full sm:w-auto text-center px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
             >
               Nominate for this Audition
             </a>

@@ -91,7 +91,7 @@ export default function OverviewSection() {
           </div>
           <a
             href="#categories"
-            className="whitespace-nowrap px-6 py-3 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
+            className="w-full sm:w-auto text-center px-6 py-3 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
           >
             Explore Categories &rarr;
           </a>

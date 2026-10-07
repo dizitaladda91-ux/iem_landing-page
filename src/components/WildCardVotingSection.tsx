@@ -167,7 +167,7 @@ export default function WildCardVotingSection() {
             </div>
             <a
               href="#register"
-              className="self-start sm:self-auto px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors whitespace-nowrap"
+              className="self-start sm:self-auto w-full sm:w-auto text-center px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
             >
               Get Your Child Listed &rarr;
             </a>
@@ -251,7 +251,7 @@ export default function WildCardVotingSection() {
             <div>
               <strong className="text-charcoal uppercase font-bold">FAIR PLAY POLICY:</strong> Only genuine and organic engagement is accepted. Any automated, paid, or fraudulent voting leads to immediate disqualification.
             </div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-pink-primary whitespace-nowrap bg-surface border border-border-pink px-3 py-1 rounded">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-pink-primary bg-surface border border-border-pink px-3 py-1 rounded">
               VERIFIED JURY AUDIT
             </span>
           </div>
