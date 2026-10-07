@@ -16,15 +16,27 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border-pink">
-      {/* Top Notification Bar - Solid Pink, No Gradient */}
-      <div className="bg-pink-soft text-pink-dark py-2 px-3 sm:px-4 text-[10px] sm:text-xs font-semibold tracking-wider text-center border-b border-border-pink">
-        <span className="inline-block px-2 py-0.5 bg-white text-pink-primary border border-border-pink rounded mr-1 sm:mr-2 font-bold uppercase">
-          LUCKNOW 2026
-        </span>
-        <span className="leading-relaxed">
-          OFFICIAL REGISTRATIONS &amp; SOCIAL VOTING OPEN — FINALE ON CHILDREN&apos;S DAY, 14TH NOV
-        </span>
+      {/* Top Running Announcement Bar - Marquee / Running Animation */}
+      <div className="bg-pink-soft text-pink-dark py-2 overflow-hidden border-b border-border-pink select-none">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="flex items-center mx-4 sm:mx-6 shrink-0">
+              <span className="inline-block px-2 py-0.5 bg-white text-pink-primary border border-border-pink rounded mr-2.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                LUCKNOW 2026
+              </span>
+              <span className="text-xs sm:text-xs font-bold uppercase tracking-wider text-pink-dark">
+                OFFICIAL REGISTRATIONS &amp; SOCIAL VOTING OPEN — FINALE ON CHILDREN&apos;S DAY, 14TH NOV
+              </span>
+              <span className="mx-5 text-pink-primary font-black text-sm">&bull;</span>
+              <span className="text-xs sm:text-xs font-bold uppercase tracking-wider text-charcoal">
+                FREE NOMINATION &bull; AUDITION AT JASHN REALTY (26 OCT) &bull; WIN ₹21,000 CASH
+              </span>
+              <span className="mx-5 text-pink-primary font-black text-sm">&bull;</span>
+            </div>
+          ))}
+        </div>
       </div>
+
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

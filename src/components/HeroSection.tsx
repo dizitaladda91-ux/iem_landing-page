@@ -58,68 +58,68 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <div className="space-y-2">
-              <p className="text-[10px] sm:text-sm font-extrabold uppercase tracking-[0.18em] sm:tracking-[0.3em] text-pink-primary leading-relaxed">
+              <p className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-pink-primary leading-relaxed">
                 INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
               </p>
-              <h1 className="font-serif text-4xl sm:text-7xl lg:text-8xl font-black text-charcoal tracking-tight leading-[0.9] uppercase">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-black text-charcoal tracking-tight leading-[0.95] uppercase">
                 RUNWAY
               </h1>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                <span className="font-serif italic text-2xl sm:text-5xl font-light text-pink-primary leading-none">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
+                <span className="font-serif italic text-xl sm:text-3xl font-light text-pink-primary leading-none">
                   Kids
                 </span>
-                <span className="font-serif text-2xl sm:text-5xl font-extrabold tracking-widest text-charcoal uppercase leading-none">
+                <span className="font-serif text-xl sm:text-3xl font-extrabold tracking-widest text-charcoal uppercase leading-none">
                   FASHION WEEK
                 </span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-charcoal-muted max-w-xl font-normal leading-relaxed">
               A premier celebration of confidence, style, and stage presence for children 
               from newborn to Class 5. Complete with portfolio shoots, city tours, 
               social voting, and a prestigious Mega Finale on Children&apos;s Day.
             </p>
 
             {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 pt-1">
               <a
                 href="#register"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-md hover:shadow-lg active:scale-95"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3 text-center text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-sm hover:shadow active:scale-95"
               >
                 Nominate Your Child [Free Entry]
               </a>
               <a
                 href="#voting"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-center text-xs sm:text-sm font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink hover:bg-pink-soft transition-all rounded shadow-sm hover:shadow"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3 text-center text-xs font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink hover:bg-pink-soft transition-all rounded shadow-sm hover:shadow"
               >
                 Participate in Social Voting
               </a>
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-border-pink">
-              <div className="bg-white p-3 rounded border border-border-pink">
-                <div className="text-2xl font-serif font-black text-charcoal">4</div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-5 border-t border-border-pink">
+              <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
+                <div className="text-xl font-serif font-black text-charcoal">4</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted">
                   Age Categories
                 </div>
               </div>
-              <div className="bg-white p-3 rounded border border-border-pink">
-                <div className="text-2xl font-serif font-black text-pink-primary">₹21,000</div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+              <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
+                <div className="text-xl font-serif font-black text-pink-primary">₹21,000</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted">
                   Cash Award
                 </div>
               </div>
-              <div className="bg-white p-3 rounded border border-border-pink">
-                <div className="text-2xl font-serif font-black text-charcoal">26 OCT</div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+              <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
+                <div className="text-xl font-serif font-black text-charcoal">26 OCT</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted">
                   Mega Audition
                 </div>
               </div>
-              <div className="bg-white p-3 rounded border border-border-pink">
-                <div className="text-2xl font-serif font-black text-pink-primary">14 NOV</div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-muted">
+              <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
+                <div className="text-xl font-serif font-black text-pink-primary">14 NOV</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted">
                   Grand Finale
                 </div>
               </div>
@@ -155,26 +155,26 @@ export default function HeroSection() {
                   COUNTDOWN TO THE RUNWAY FINALE
                 </div>
                 <div className="grid grid-cols-4 gap-2 text-center">
-                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
-                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-2.5 rounded">
+                    <span className="text-lg sm:text-xl font-bold font-serif text-charcoal block">
                       {timeLeft.days}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Days</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
-                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-2.5 rounded">
+                    <span className="text-lg sm:text-xl font-bold font-serif text-charcoal block">
                       {timeLeft.hours}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Hours</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
-                    <span className="text-xl sm:text-3xl font-black font-serif text-charcoal block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-2.5 rounded">
+                    <span className="text-lg sm:text-xl font-bold font-serif text-charcoal block">
                       {timeLeft.minutes}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-charcoal-muted">Mins</span>
                   </div>
-                  <div className="bg-surface border border-border-pink p-2 sm:p-3 rounded">
-                    <span className="text-xl sm:text-3xl font-black font-serif text-pink-primary block">
+                  <div className="bg-surface border border-border-pink p-2 sm:p-2.5 rounded">
+                    <span className="text-lg sm:text-xl font-bold font-serif text-pink-primary block">
                       {timeLeft.seconds}
                     </span>
                     <span className="text-[10px] font-bold uppercase text-pink-dark">Secs</span>
