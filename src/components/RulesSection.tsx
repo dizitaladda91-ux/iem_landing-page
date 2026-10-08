@@ -68,10 +68,10 @@ export default function RulesSection() {
           <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             GUIDELINES &amp; POLICIES
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Official Rules &amp; Parent FAQs
           </h2>
-          <p className="mt-3 text-base text-charcoal-muted leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             Essential information regarding costumes, rehearsals, documents, and event day decorum to ensure every young participant shines in a safe, celebratory setting.
           </p>
         </div>

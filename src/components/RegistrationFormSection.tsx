@@ -106,10 +106,10 @@ export default function RegistrationFormSection() {
           <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             CONTESTANT NOMINATION &amp; VOTING CARD
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Register Child &amp; Generate Voting Card
           </h2>
-          <p className="mt-3 text-base text-charcoal-muted leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             Fill in the participant details below. As you enter the information, your child&apos;s 
             official <strong className="text-charcoal font-semibold">Social Media Voting Creative</strong> will 
             generate in real-time on the right. Submit to register for both the physical audition and 
@@ -350,7 +350,7 @@ export default function RegistrationFormSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 text-center text-sm font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-all shadow-md hover:shadow-lg disabled:opacity-50"
+                  className="w-full py-3.5 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-all shadow-sm hover:shadow disabled:opacity-50"
                 >
                   {isSubmitting ? "PROCESSING NOMINATION..." : "SUBMIT NOMINATION & GENERATE VOTING CARD"}
                 </button>
@@ -372,12 +372,12 @@ export default function RegistrationFormSection() {
             </div>
 
             {/* Official Digital Voting Creative Card */}
-            <div className="bg-white border-2 border-border-pink rounded-xl p-6 sm:p-8 shadow-lg relative overflow-hidden">
+            <div className="bg-white border-2 border-border-pink rounded-xl p-5 sm:p-6 shadow-md relative overflow-hidden">
               
               {/* Card Header */}
-              <div className="border-b-2 border-border-pink pb-4 mb-4 text-center">
+              <div className="border-b-2 border-border-pink pb-3 mb-3 text-center">
                 <div className="flex items-center justify-center gap-2 mb-1">
-                  <span className="font-serif font-black text-2xl tracking-widest text-charcoal uppercase">
+                  <span className="font-serif font-black text-xl tracking-widest text-charcoal uppercase">
                     RUNWAY
                   </span>
                   <span className="bg-pink-primary text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded tracking-widest">
@@ -393,8 +393,8 @@ export default function RegistrationFormSection() {
               </div>
 
               {/* Child Photo Frame */}
-              <div className="relative mb-5">
-                <div className="w-full h-56 bg-surface border-2 border-border-pink rounded-lg overflow-hidden flex flex-col items-center justify-center text-center p-4">
+              <div className="relative mb-4">
+                <div className="w-full h-48 sm:h-52 bg-surface border-2 border-border-pink rounded-lg overflow-hidden flex flex-col items-center justify-center text-center p-4">
                   {photoPreview ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -404,7 +404,7 @@ export default function RegistrationFormSection() {
                     />
                   ) : (
                     <div className="space-y-2">
-                      <div className="w-16 h-16 rounded-full bg-white border border-border-pink mx-auto flex items-center justify-center font-serif text-2xl font-black text-pink-primary shadow-sm">
+                      <div className="w-14 h-14 rounded-full bg-white border border-border-pink mx-auto flex items-center justify-center font-serif text-xl font-bold text-pink-primary shadow-sm">
                         {formData.childName ? formData.childName.charAt(0).toUpperCase() : "K"}
                       </div>
                       <div className="text-xs font-bold uppercase text-charcoal">
@@ -429,12 +429,12 @@ export default function RegistrationFormSection() {
               </div>
 
               {/* Participant Name & Details */}
-              <div className="space-y-3 pb-5 border-b border-border-pink">
+              <div className="space-y-2.5 pb-4 border-b border-border-pink">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted block">
                     CONTESTANT NAME
                   </span>
-                  <h3 className="font-serif text-2xl font-black text-charcoal uppercase leading-tight">
+                  <h3 className="font-serif text-xl font-bold text-charcoal uppercase leading-tight">
                     {formData.childName || "Participant Name"}
                   </h3>
                 </div>

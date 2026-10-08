@@ -98,10 +98,10 @@ export default function ScheduleFlowSection() {
           <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             COMPLETE ROADMAP
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Event Flow &amp; Timeline
           </h2>
-          <p className="mt-3 text-base text-charcoal-muted leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             From the first free nomination to the Children&apos;s Day Mega Finale, every stage is 
             meticulously curated to provide a stress-free, celebratory, and enriching experience for children and families.
           </p>
@@ -117,7 +117,7 @@ export default function ScheduleFlowSection() {
               <div
                 key={st.step}
                 onClick={() => setSelectedStep(idx)}
-                className={`cursor-pointer p-6 rounded-xl border transition-all relative ${
+                className={`cursor-pointer p-5 sm:p-6 rounded-xl border transition-all relative ${
                   isSelected
                     ? "bg-pink-light border-2 border-pink-primary shadow-md -translate-y-1"
                     : isHighlight
@@ -126,17 +126,17 @@ export default function ScheduleFlowSection() {
                 }`}
               >
                 {/* Step badge & date */}
-                <div className="flex justify-between items-center mb-4">
-                  <span className="font-serif text-2xl font-black text-pink-primary">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="font-serif text-xl font-black text-pink-primary">
                     {st.step}
                   </span>
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink px-2.5 py-1 rounded">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-charcoal bg-white border border-border-pink px-2 py-0.5 rounded">
                     {st.date}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-base font-bold text-charcoal mb-2 leading-snug">
+                <h3 className="font-serif text-sm sm:text-base font-bold text-charcoal mb-1.5 leading-snug">
                   {st.title}
                 </h3>
 
@@ -172,7 +172,7 @@ export default function ScheduleFlowSection() {
             <span className="text-xs font-bold uppercase tracking-wider text-pink-primary">
               SELECTED MILESTONE &bull; STEP {steps[selectedStep].step}
             </span>
-            <h4 className="font-serif text-xl sm:text-2xl font-black text-charcoal">
+            <h4 className="font-serif text-lg sm:text-xl font-bold text-charcoal">
               {steps[selectedStep].title} — {steps[selectedStep].date}
             </h4>
             <p className="text-xs sm:text-sm text-charcoal-muted">

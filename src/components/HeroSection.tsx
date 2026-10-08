@@ -57,19 +57,28 @@ export default function HeroSection() {
             </div>
 
             {/* Main Headline */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               <p className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-pink-primary leading-relaxed">
                 INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
               </p>
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-black text-charcoal tracking-tight leading-[0.95] uppercase">
-                RUNWAY
-              </h1>
+
+              <div className="relative inline-block">
+                <div className="text-[3.4rem] font-black leading-none tracking-[-0.06em] text-transparent sm:text-[5.2rem] lg:text-[7rem]">
+                  <span className="poster-title inline-block text-pink-primary drop-shadow-[0_8px_0_rgba(154,31,83,0.35)]">
+                    Runway
+                  </span>
+                </div>
+                <div className="pointer-events-none absolute -right-3 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/90 p-2 text-xl shadow-lg sm:flex">
+                  <span aria-hidden="true">👑</span>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
-                <span className="font-serif italic text-xl sm:text-3xl font-light text-pink-primary leading-none">
-                  Kids
+                <span className="font-serif italic text-2xl font-bold text-pink-primary leading-none sm:text-4xl">
+                  Kids&apos;
                 </span>
-                <span className="font-serif text-xl sm:text-3xl font-extrabold tracking-widest text-charcoal uppercase leading-none">
-                  FASHION WEEK
+                <span className="poster-subtitle inline-block rounded-full bg-white/80 px-3 py-1 font-serif text-xl font-black uppercase tracking-[0.04em] text-charcoal shadow-sm sm:text-3xl">
+                  Fashion Week
                 </span>
               </div>
             </div>

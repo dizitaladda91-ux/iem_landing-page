@@ -118,10 +118,10 @@ export default function CategoriesSection() {
             <div className="inline-block px-3 py-1 bg-white text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
               RAMP WALK SEGMENTS
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
               Age Categories &amp; Segments
             </h2>
-            <p className="mt-2 text-base text-charcoal-muted max-w-xl">
+            <p className="mt-2 text-sm sm:text-base text-charcoal-muted max-w-xl">
               Carefully structured divisions ensuring age-appropriate grooming, comfort, and safety for every young participant.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function CategoriesSection() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat)}
-                className={`text-left p-6 rounded-xl border transition-all text-charcoal ${
+                className={`text-left p-5 sm:p-6 rounded-xl border transition-all text-charcoal ${
                   isSelected
                     ? "bg-white border-2 border-pink-primary shadow-md -translate-y-1"
                     : "bg-white border-border-pink hover:border-pink-primary"
@@ -156,7 +156,7 @@ export default function CategoriesSection() {
                     </span>
                   )}
                 </div>
-                <h3 className="font-serif text-lg font-bold text-charcoal mb-2 leading-snug">
+                <h3 className="font-serif text-base font-bold text-charcoal mb-1.5 leading-snug">
                   {cat.title}
                 </h3>
                 <div className="text-xs font-semibold text-charcoal-muted">
@@ -168,10 +168,10 @@ export default function CategoriesSection() {
         </div>
 
         {/* Active Category Detailed Showcase Card */}
-        <div className="bg-white border border-border-pink rounded-xl p-6 sm:p-10 shadow-sm">
+        <div className="bg-white border border-border-pink rounded-xl p-6 sm:p-8 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <div className="lg:col-span-7 space-y-4">
+            <div className="lg:col-span-7 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs font-extrabold tracking-widest uppercase bg-pink-soft text-pink-dark px-3 py-1 rounded border border-border-pink">
                   {activeCategory.categoryNumber}
@@ -181,11 +181,11 @@ export default function CategoriesSection() {
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl font-black text-charcoal">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-charcoal">
                 {activeCategory.title}
               </h3>
 
-              <p className="text-base text-charcoal-muted leading-relaxed">
+              <p className="text-xs sm:text-sm text-charcoal-muted leading-relaxed">
                 {activeCategory.description}
               </p>
 

@@ -51,10 +51,10 @@ export default function PrizesSection() {
           <div className="inline-block px-3 py-1 bg-white text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             AWARDS &amp; REWARDS
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Winner Rewards &amp; Brand Privileges
           </h2>
-          <p className="mt-3 text-base text-charcoal-muted leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             Every participating child receives official grooming, professional photos, and a Certificate of Participation. Outstanding models earn prestigious cash rewards, family trips, scholarships, and media stardom.
           </p>
         </div>
@@ -64,23 +64,23 @@ export default function PrizesSection() {
           {prizes.map((pz, idx) => (
             <div
               key={idx}
-              className="bg-white border border-border-pink p-8 rounded-xl flex flex-col justify-between hover:border-pink-primary transition-all duration-300 hover:-translate-y-1"
+              className="bg-white border border-border-pink p-6 sm:p-7 rounded-xl flex flex-col justify-between hover:border-pink-primary transition-all duration-300 hover:-translate-y-1"
             >
               <div>
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center mb-3">
                   <span className="text-[10px] font-extrabold uppercase tracking-widest text-pink-primary bg-pink-soft px-2.5 py-1 rounded">
                     {pz.badge}
                   </span>
-                  <span className="font-serif text-lg font-black text-charcoal-muted">
+                  <span className="font-serif text-base font-black text-charcoal-muted">
                     0{idx + 1}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-xl font-black text-charcoal mb-2 leading-snug">
+                <h3 className="font-serif text-lg font-bold text-charcoal mb-1.5 leading-snug">
                   {pz.title}
                 </h3>
 
-                <div className="text-xs font-bold uppercase tracking-wider text-pink-dark mb-3">
+                <div className="text-xs font-bold uppercase tracking-wider text-pink-dark mb-2">
                   {pz.target}
                 </div>
 

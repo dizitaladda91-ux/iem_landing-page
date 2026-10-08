@@ -102,10 +102,10 @@ export default function WildCardVotingSection() {
           <div className="inline-block px-3 py-1 bg-white text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             SOCIAL MEDIA WILD CARD ENTRY
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Direct Finale Entry via Social Voting
           </h2>
-          <p className="mt-3 text-base text-charcoal-muted leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             Parents don&apos;t just wait for offline audition callbacks! Once registered, every child 
             receives an official branded social media voting card. The top 2 most engaged participants 
             per category directly enter the Grand Finale without audition screening!
@@ -114,11 +114,11 @@ export default function WildCardVotingSection() {
 
         {/* Rules & Process Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white border border-border-pink p-8 rounded-xl">
-            <div className="text-xs font-black uppercase tracking-widest text-pink-primary mb-2">
+          <div className="bg-white border border-border-pink p-6 sm:p-7 rounded-xl">
+            <div className="text-[11px] font-black uppercase tracking-widest text-pink-primary mb-2">
               STEP 01
             </div>
-            <h3 className="font-serif text-lg font-bold text-charcoal mb-2">
+            <h3 className="font-serif text-base font-bold text-charcoal mb-1.5">
               Official Creative Generation
             </h3>
             <p className="text-xs text-charcoal-muted leading-relaxed">
@@ -126,11 +126,11 @@ export default function WildCardVotingSection() {
             </p>
           </div>
 
-          <div className="bg-white border border-border-pink p-8 rounded-xl">
-            <div className="text-xs font-black uppercase tracking-widest text-pink-primary mb-2">
+          <div className="bg-white border border-border-pink p-6 sm:p-7 rounded-xl">
+            <div className="text-[11px] font-black uppercase tracking-widest text-pink-primary mb-2">
               STEP 02
             </div>
-            <h3 className="font-serif text-lg font-bold text-charcoal mb-2">
+            <h3 className="font-serif text-base font-bold text-charcoal mb-1.5">
               Engagement Scoring Formula
             </h3>
             <p className="text-xs text-charcoal-muted leading-relaxed">
@@ -138,11 +138,11 @@ export default function WildCardVotingSection() {
             </p>
           </div>
 
-          <div className="bg-white border border-border-pink p-8 rounded-xl">
-            <div className="text-xs font-black uppercase tracking-widest text-pink-primary mb-2">
+          <div className="bg-white border border-border-pink p-6 sm:p-7 rounded-xl">
+            <div className="text-[11px] font-black uppercase tracking-widest text-pink-primary mb-2">
               STEP 03
             </div>
-            <h3 className="font-serif text-lg font-bold text-charcoal mb-2">
+            <h3 className="font-serif text-base font-bold text-charcoal mb-1.5">
               Direct Wild Card Pass
             </h3>
             <p className="text-xs text-charcoal-muted leading-relaxed">
@@ -152,13 +152,13 @@ export default function WildCardVotingSection() {
         </div>
 
         {/* Live Voting Simulator Board */}
-        <div className="bg-white border-2 border-border-pink rounded-xl p-6 sm:p-10 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-border-pink gap-4">
+        <div className="bg-white border-2 border-border-pink rounded-xl p-6 sm:p-8 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-border-pink gap-4">
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-pink-primary bg-pink-soft px-2.5 py-1 rounded">
                 LIVE DEMONSTRATION
               </span>
-              <h3 className="font-serif text-2xl font-black text-charcoal mt-1">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-charcoal mt-1">
                 Featured Contestant Voting Board
               </h3>
               <p className="text-xs text-charcoal-muted">

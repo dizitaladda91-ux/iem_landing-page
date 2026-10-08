@@ -39,10 +39,10 @@ export default function OverviewSection() {
           <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
             ABOUT THE MOVEMENT
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
             Nurturing Young Stars, Celebrating Individuality
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-charcoal-muted leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-charcoal-muted leading-relaxed">
             The Kids Fashion Week is a multi-day celebration of style, confidence, and creativity for children. 
             It provides a glamorous, respectful platform for kids of all age groups to shine on the runway — 
             from newborns in strollers to energetic pre-teens — while giving brands and designers 
@@ -55,20 +55,20 @@ export default function OverviewSection() {
           {pillars.map((item, idx) => (
             <div
               key={idx}
-              className="bg-surface border border-border-pink p-8 rounded-xl hover:border-pink-primary transition-all duration-300 hover:-translate-y-1 group"
+              className="bg-surface border border-border-pink p-6 sm:p-7 rounded-xl hover:border-pink-primary transition-all duration-300 hover:-translate-y-1 group"
             >
-              <div className="flex justify-between items-start mb-6">
-                <span className="font-serif text-4xl font-black text-pink-primary">
+              <div className="flex justify-between items-start mb-4">
+                <span className="font-serif text-2xl sm:text-3xl font-black text-pink-primary">
                   {item.num}
                 </span>
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-pink-dark bg-white border border-border-pink px-2.5 py-1 rounded">
                   {item.tag}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-charcoal mb-3 group-hover:text-pink-primary transition-colors">
+              <h3 className="text-base font-bold text-charcoal mb-2 group-hover:text-pink-primary transition-colors">
                 {item.title}
               </h3>
-              <p className="text-sm text-charcoal-muted leading-relaxed">
+              <p className="text-xs sm:text-sm text-charcoal-muted leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -76,15 +76,15 @@ export default function OverviewSection() {
         </div>
 
         {/* Mission Statement Box */}
-        <div className="mt-12 bg-pink-light border border-border-pink rounded-xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2">
-            <span className="text-xs font-extrabold tracking-widest uppercase text-pink-primary">
+        <div className="mt-12 bg-pink-light border border-border-pink rounded-xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1.5">
+            <span className="text-[11px] font-extrabold tracking-widest uppercase text-pink-primary">
               CORE PHILOSOPHY
             </span>
-            <h4 className="font-serif text-2xl font-bold text-charcoal">
+            <h4 className="font-serif text-lg sm:text-xl font-bold text-charcoal">
               &ldquo;Tiny Trendsetters, Big Runway Dreams!&rdquo;
             </h4>
-            <p className="text-sm text-charcoal-muted max-w-2xl">
+            <p className="text-xs sm:text-sm text-charcoal-muted max-w-2xl">
               Every child is a star. Our screening and audition processes are structured around comfort, 
               encouragement, and constructive development, without undue pressure or harsh elimination.
             </p>

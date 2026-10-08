@@ -60,7 +60,7 @@ export default function HeroGalleryCarousel() {
 
   return (
     <div
-      className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-2xl border border-white/80 bg-pink-soft shadow-[0_24px_70px_-30px_rgba(159,18,57,0.5)]"
+      className="runway-hero-card relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-[28px] border border-white/80 bg-pink-soft shadow-[0_30px_90px_-30px_rgba(159,18,57,0.55)]"
       role="region"
       aria-roledescription="carousel"
       aria-label="Runway Kids photo highlights"
@@ -71,6 +71,11 @@ export default function HeroGalleryCarousel() {
       }}
       onTouchEnd={handleTouchEnd}
     >
+      <div className="runway-hero-glow absolute -inset-10" />
+      <div className="runway-sparkle sparkle-one" />
+      <div className="runway-sparkle sparkle-two" />
+      <div className="runway-sparkle sparkle-three" />
+
       {slides.map((slide, index) => (
         <div
           key={slide.image}
@@ -85,15 +90,15 @@ export default function HeroGalleryCarousel() {
             fill
             priority={index === 0}
             sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover"
+            className="scale-[1.04] object-cover"
           />
         </div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-charcoal/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1d1a1a]/85 via-[#1d1a1a]/10 to-[#1d1a1a]/15" />
 
       <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-3 sm:left-6 sm:right-6 sm:top-6">
-        <span className="rounded-full border border-white/35 bg-charcoal/25 px-3 py-1.5 text-[9px] font-extrabold tracking-[0.16em] text-white backdrop-blur-sm sm:text-[10px]">
+        <span className="rounded-full border border-white/35 bg-[#3a2a33]/30 px-3 py-1.5 text-[9px] font-extrabold tracking-[0.16em] text-white backdrop-blur-sm sm:text-[10px]">
           RUNWAY KIDS · LUCKNOW 2026
         </span>
         <span className="rounded-full bg-white px-3 py-1.5 text-[9px] font-extrabold tracking-wider text-pink-dark shadow-sm sm:text-[10px]">

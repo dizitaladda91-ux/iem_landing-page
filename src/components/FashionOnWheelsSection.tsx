@@ -39,12 +39,12 @@ export default function FashionOnWheelsSection() {
               <span className="text-xs font-extrabold uppercase tracking-widest text-pink-primary block">
                 MOVING BILLBOARD &amp; CELEBRATION
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-black text-charcoal uppercase tracking-tight">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
                 Fashion on Wheels
               </h2>
             </div>
 
-            <p className="text-base text-charcoal-muted leading-relaxed">
+            <p className="text-sm sm:text-base text-charcoal-muted leading-relaxed">
               An open-branded luxury double-decker bus packed with participants, proud parents, and 
               mentors travels across Lucknow&apos;s most iconic spots leading up to the grand finale. 
               Dressed in event tees and chic casuals, young trendsetters dance, wave to cheerers, and 
@@ -52,11 +52,11 @@ export default function FashionOnWheelsSection() {
             </p>
 
             {/* Tagline Callout */}
-            <div className="p-5 bg-pink-light border-l-4 border-pink-primary rounded-r">
-              <span className="text-xs font-black uppercase tracking-wider text-pink-dark block">
+            <div className="p-4 sm:p-5 bg-pink-light border-l-4 border-pink-primary rounded-r">
+              <span className="text-[11px] font-black uppercase tracking-wider text-pink-dark block">
                 OFFICIAL SLOGAN
               </span>
-              <p className="font-serif text-xl font-bold text-charcoal italic mt-1">
+              <p className="font-serif text-lg sm:text-xl font-bold text-charcoal italic mt-1">
                 &ldquo;Tiny Trendsetters, Big Runway Dreams!&rdquo;
               </p>
             </div>
