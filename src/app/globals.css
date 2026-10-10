@@ -191,6 +191,53 @@ svg {
   }
 }
 
+@keyframes introTextRise {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFillUp {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes imageDropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-115%) scale(0.94);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.intro-rise-up {
+  animation: introTextRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.intro-text-fill {
+  animation: textFillUp 1.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.intro-image-drop {
+  animation: imageDropFromTop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
