@@ -5,10 +5,10 @@ import React from "react";
 export default function PrizesSection() {
   const prizes = [
     {
-      badge: "CASH AWARD",
-      title: "₹21,000 Cash Prize",
+      badge: "CASH PRIZE & HAMPER",
+      title: "Cash Prize ₹11,000 with Gift Hamper",
       target: "Awarded to Winner (Male & Female)",
-      desc: "Direct cash purse recognizing exceptional poise, runway confidence, and jury scores.",
+      desc: "₹11,000 direct cash prize along with an exclusive gift hamper recognizing exceptional poise, runway confidence, and jury scores.",
     },
     {
       badge: "HOLIDAY TOUR",
@@ -55,7 +55,7 @@ export default function PrizesSection() {
             Winner Rewards &amp; Brand Privileges
           </h2>
           <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
-            Every participating child receives official grooming, professional photos, and a Certificate of Participation. Outstanding models earn prestigious cash rewards, family trips, scholarships, and media stardom.
+            Every participating child receives official grooming, professional photos, and a Certificate of Participation. Winners earn Cash Prize ₹11,000 with Gift Hamper, family trips, scholarships, and media stardom.
           </p>
         </div>
 
@@ -110,10 +110,12 @@ export default function PrizesSection() {
             </p>
           </div>
           <a
-            href="#register"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto text-center px-6 py-3.5 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
           >
-            Nominate Today &rarr;
+            Nominate Today
           </a>
         </div>
 

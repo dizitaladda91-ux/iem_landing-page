@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-border-pink pt-16 pb-12">
+    <footer className="bg-surface border-t border-border-pink pt-12 sm:pt-16 pb-24 md:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -12,12 +12,12 @@ export default function Footer() {
           
           {/* Col 1: Brand & Presentation */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="font-serif font-black text-2xl tracking-widest text-charcoal uppercase">
-                RUNWAY
+            <div className="flex flex-col">
+              <span className="font-serif font-black text-2xl tracking-widest text-charcoal uppercase leading-none">
+                Runway
               </span>
-              <span className="bg-pink-primary text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded tracking-widest">
-                KIDS 2026
+              <span className="text-xs font-extrabold uppercase tracking-widest text-pink-primary mt-1">
+                Kids Fashion Week 2026
               </span>
             </div>
             
@@ -155,7 +155,14 @@ export default function Footer() {
             <span>&bull;</span>
             <a href="#voting" className="hover:text-pink-primary">Fair Play Policy</a>
             <span>&bull;</span>
-            <a href="#register" className="text-pink-primary hover:underline">Register Now</a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-primary hover:underline"
+            >
+              Register Now
+            </a>
           </div>
         </div>
 

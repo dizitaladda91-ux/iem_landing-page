@@ -1,163 +1,147 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 const slides = [
   {
-    image: "/images/runway-event.jpg",
-    alt: "Young runway finalists celebrate at a kids fashion show",
-    label: "A RUNWAY FOR EVERY STAR",
-    title: "The spotlight is theirs.",
+    id: 1,
+    image: "/images/category-1.jpg",
+    alt: "Category 1 Newborn Walk with Mom at Runway Kids Fashion Week",
+    label: "CATEGORY 01 • UNDER 1 YEAR",
+    title: "Newborn — Walk with Mom",
+    badge: "CATEGORY 01",
   },
   {
-    image: "/images/runway-toddler.png",
-    alt: "A young contestant poses on the kids fashion show runway",
-    label: "CONFIDENCE IN EVERY STEP",
-    title: "Little steps. Big dreams.",
+    id: 2,
+    image: "/images/category-2.jpg",
+    alt: "Category 2 Class 1 to Class 3 Independent Ramp Walk",
+    label: "CATEGORY 02 • CLASS 1 – CLASS 3",
+    title: "Independent Ramp Walk",
+    badge: "CATEGORY 02",
   },
   {
-    image: "/images/runway-model.png",
-    alt: "A young child models a stylish outfit at a kids fashion event",
-    label: "A WEEK FULL OF WONDER",
-    title: "Every child can shine.",
+    id: 3,
+    image: "/images/category-3.jpg",
+    alt: "Category 3 Class 4 to Class 5 Groomed Fashion Walk",
+    label: "CATEGORY 03 • CLASS 4 – CLASS 5",
+    title: "Groomed Fashion Walk",
+    badge: "CATEGORY 03",
+  },
+  {
+    id: 4,
+    image: "/images/category-1.jpg",
+    alt: "Category 1 Newborn Walk with Mom showcase",
+    label: "MOTHER & BABY DUO",
+    title: "Charming Stroller Walk",
+    badge: "CATEGORY 01",
+  },
+  {
+    id: 5,
+    image: "/images/category-2.jpg",
+    alt: "Category 2 Class 1 to Class 3 Themed Round",
+    label: "SOLO RAMP + THEMED ROUND",
+    title: "Little Steps, Big Dreams",
+    badge: "CATEGORY 02",
+  },
+  {
+    id: 6,
+    image: "/images/category-3.jpg",
+    alt: "Category 3 Designer Showcase at Runway Kids Fashion Week 2026",
+    label: "DESIGNER SHOWCASE",
+    title: "Every Child Can Shine",
+    badge: "CATEGORY 03",
   },
 ];
 
 export default function HeroGalleryCarousel() {
-  const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const touchStartX = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % slides.length);
-    }, 5000);
-
-    return () => window.clearInterval(interval);
-  }, [isPaused]);
-
-  const showPrevious = () => {
-    setActiveSlide((current) => (current - 1 + slides.length) % slides.length);
-  };
-
-  const showNext = () => {
-    setActiveSlide((current) => (current + 1) % slides.length);
-  };
-
-  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
-    if (touchStartX.current === null) return;
-
-    const distance = event.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(distance) > 48) {
-      if (distance > 0) showPrevious();
-      else showNext();
-    }
-    touchStartX.current = null;
-  };
 
   return (
-    <div
-      className="runway-hero-card relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-[28px] border border-white/80 bg-pink-soft shadow-[0_30px_90px_-30px_rgba(159,18,57,0.55)]"
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="Runway Kids photo highlights"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={(event) => {
-        touchStartX.current = event.touches[0].clientX;
-      }}
-      onTouchEnd={handleTouchEnd}
+    <section
+      className="relative bg-white py-12 sm:py-16 lg:py-24 border-b border-border-pink overflow-hidden"
+      aria-label="Runway Kids rotating photo showcase"
     >
-      <div className="runway-hero-glow absolute -inset-10" />
-      <div className="runway-sparkle sparkle-one" />
-      <div className="runway-sparkle sparkle-two" />
-      <div className="runway-sparkle sparkle-three" />
-
-      {slides.map((slide, index) => (
-        <div
-          key={slide.image}
-          className={`absolute inset-0 transition-opacity duration-700 motion-reduce:transition-none ${
-            activeSlide === index ? "opacity-100" : "opacity-0"
-          }`}
-          aria-hidden={activeSlide !== index}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            priority={index === 0}
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            className="scale-[1.04] object-cover"
-          />
+      {/* Decorative subtle background glow & rotating circular orbit rings */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] lg:w-[560px] lg:h-[560px] rounded-full border border-dashed border-pink-primary/25 orbit-ring-spin flex items-center justify-between">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -ml-1.5 rounded-full bg-pink-primary shadow-[0_0_12px_#E11D48]" />
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -mr-1.5 rounded-full bg-pink-primary shadow-[0_0_12px_#E11D48]" />
         </div>
-      ))}
-
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1d1a1a]/85 via-[#1d1a1a]/10 to-[#1d1a1a]/15" />
-
-      <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-3 sm:left-6 sm:right-6 sm:top-6">
-        <span className="rounded-full border border-white/35 bg-[#3a2a33]/30 px-3 py-1.5 text-[9px] font-extrabold tracking-[0.16em] text-white backdrop-blur-sm sm:text-[10px]">
-          RUNWAY KIDS · LUCKNOW 2026
-        </span>
-        <span className="rounded-full bg-white px-3 py-1.5 text-[9px] font-extrabold tracking-wider text-pink-dark shadow-sm sm:text-[10px]">
-          FREE ENTRY
-        </span>
+        <div className="absolute w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[420px] rounded-full bg-pink-soft/60 blur-3xl" />
       </div>
 
-      <div
-        className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-3 p-4 text-white sm:p-6"
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        <div className="min-w-0">
-          <div className="mb-1 text-[9px] font-extrabold tracking-[0.18em] text-pink-100 sm:text-[10px]">
-            {slides[activeSlide].label}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface text-pink-dark border border-border-pink text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+            <span className="w-2 h-2 rounded-full bg-pink-primary animate-pulse" />
+            <span>360° RUNWAY SPOTLIGHT GALLERY</span>
           </div>
-          <h2 className="font-serif text-2xl font-black leading-tight sm:text-3xl">
-            {slides[activeSlide].title}
+          <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
+            Shining Stars on the Runway
           </h2>
+          <p className="mt-2 text-xs sm:text-sm text-charcoal-muted leading-relaxed px-2">
+            Glimpses of our official categories from Runway Kids Fashion Week 2026. Tap or hover over the rotating circle to pause and inspect.
+          </p>
         </div>
 
-        <div className="flex shrink-0 gap-2">
+        {/* 3D Circular Rotating Ring Container */}
+        <div
+          className="carousel-3d-scene relative mx-auto flex h-[240px] sm:h-[330px] md:h-[390px] lg:h-[430px] w-full items-center justify-center select-none"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
+          <div
+            className={`carousel-3d-ring relative h-[195px] w-[125px] sm:h-[260px] sm:w-[170px] md:h-[310px] md:w-[205px] lg:h-[340px] lg:w-[230px] ${
+              isPaused ? "paused" : ""
+            }`}
+          >
+            {slides.map((slide, index) => {
+              const angle = index * (360 / slides.length);
+              return (
+                <div
+                  key={slide.id}
+                  style={{
+                    transform: `rotateY(${angle}deg) translateZ(var(--ring-radius))`,
+                  }}
+                  className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white bg-pink-soft shadow-[0_20px_50px_-15px_rgba(159,18,57,0.45)] transition-transform duration-300 hover:scale-105"
+                >
+                  <Image
+                    src={slide.image}
+                    alt={slide.alt}
+                    fill
+                    priority={index < 3}
+                    sizes="(max-width: 640px) 130px, (max-width: 1024px) 205px, 240px"
+                    className="object-cover"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Interactive Control Bar (Strict Typography, No Icons) */}
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
           <button
             type="button"
-            onClick={showPrevious}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-charcoal/20 text-lg text-white backdrop-blur-sm transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            aria-label="Previous photo"
+            onClick={() => setIsPaused((prev) => !prev)}
+            className="w-full sm:w-auto px-5 py-3 sm:py-2.5 text-xs font-extrabold uppercase tracking-wider text-pink-dark bg-surface border border-border-pink hover:bg-pink-soft rounded-full transition-colors"
           >
-            <span aria-hidden="true">&larr;</span>
+            {isPaused ? "Resume 360° Rotation" : "Pause Rotation"}
           </button>
-          <button
-            type="button"
-            onClick={showNext}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-charcoal/20 text-lg text-white backdrop-blur-sm transition hover:bg-white hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            aria-label="Next photo"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto text-center px-6 py-3 sm:py-2.5 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded-full shadow-sm transition-colors"
           >
-            <span aria-hidden="true">&rarr;</span>
-          </button>
+            Nominate Your Child [Free Entry]
+          </a>
         </div>
       </div>
-
-      <div className="absolute left-4 top-16 flex gap-1.5 sm:left-6 sm:top-20">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.image}
-            type="button"
-            onClick={() => setActiveSlide(index)}
-            className="flex h-8 items-center justify-center px-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            aria-label={`Show photo ${index + 1}`}
-            aria-pressed={activeSlide === index}
-          >
-            <span
-              className={`h-1.5 rounded-full transition-all ${
-                activeSlide === index ? "w-7 bg-white" : "w-1.5 bg-white/60"
-              }`}
-            />
-          </button>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }

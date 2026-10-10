@@ -96,15 +96,15 @@ export default function CategoriesSection() {
   const [activeCategory, setActiveCategory] = useState<CategoryDetail>(categories[0]);
 
   const handleSelectCategory = (catName: string) => {
-    // Scroll smoothly to registration form and preselect
-    const formElement = document.getElementById("register");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
-      const selectElement = document.getElementById("categorySelect") as HTMLSelectElement | null;
-      if (selectElement) {
-        selectElement.value = catName;
-        selectElement.dispatchEvent(new Event("change", { bubbles: true }));
-      }
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    const selectElement = document.getElementById("categorySelect") as HTMLSelectElement | null;
+    if (selectElement) {
+      selectElement.value = catName;
+      selectElement.dispatchEvent(new Event("change", { bubbles: true }));
     }
   };
 
@@ -227,7 +227,7 @@ export default function CategoriesSection() {
                   onClick={() => handleSelectCategory(activeCategory.title)}
                   className="w-full py-3.5 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
                 >
-                  Register in this Category &rarr;
+                  Register in this Category
                 </button>
                 <p className="text-[11px] text-center text-charcoal-muted mt-2">
                   Free entry nomination • Open to all eligible candidates

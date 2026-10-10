@@ -182,7 +182,9 @@ export default function ScheduleFlowSection() {
 
           <div className="flex gap-3">
             <a
-              href="#register"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto text-center px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
             >
               Nominate for this Audition

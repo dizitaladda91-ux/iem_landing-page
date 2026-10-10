@@ -125,6 +125,72 @@ svg {
   }
 }
 
+.carousel-3d-scene {
+  perspective: 1100px;
+  --ring-radius: 145px;
+}
+
+@media (min-width: 480px) {
+  .carousel-3d-scene {
+    perspective: 1250px;
+    --ring-radius: 195px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-3d-scene {
+    perspective: 1400px;
+    --ring-radius: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-3d-scene {
+    perspective: 1600px;
+    --ring-radius: 290px;
+  }
+}
+
+.carousel-3d-ring {
+  transform-style: preserve-3d;
+  animation: spinRing3D 24s linear infinite;
+}
+
+.carousel-3d-ring.paused {
+  animation-play-state: paused;
+}
+
+.orbit-ring-spin {
+  animation: spinOrbitFlat 30s linear infinite;
+}
+
+@keyframes spinRing3D {
+  0% {
+    transform: rotateX(-5deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-5deg) rotateY(-360deg);
+  }
+}
+
+@keyframes spinOrbitFlat {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderBar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

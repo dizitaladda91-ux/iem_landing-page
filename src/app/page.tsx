@@ -1,6 +1,8 @@
+import IntroLoader from "@/components/IntroLoader";
 import Header from "@/components/Header";
 import AnnouncementTicker from "@/components/AnnouncementTicker";
 import HeroSection from "@/components/HeroSection";
+import HeroGalleryCarousel from "@/components/HeroGalleryCarousel";
 import OverviewSection from "@/components/OverviewSection";
 import CategoriesSection from "@/components/CategoriesSection";
 import ScheduleFlowSection from "@/components/ScheduleFlowSection";
@@ -14,6 +16,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white pb-24 text-charcoal md:pb-0">
+      {/* 0. Initial Brand Loader + 3 Sequential Category Images Showcase */}
+      <IntroLoader />
+
       {/* 1. Sticky Navigation Header */}
       <Header />
 
@@ -22,6 +27,9 @@ export default function Home() {
 
       {/* 3. Hero Section with Live Countdown & Highlights */}
       <HeroSection />
+
+      {/* 3B. 360° Circular Rotating Photo Showcase Section */}
+      <HeroGalleryCarousel />
 
       {/* 4. Event Overview & 4 Core Pillars */}
       <OverviewSection />

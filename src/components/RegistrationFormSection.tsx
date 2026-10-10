@@ -55,6 +55,9 @@ export default function RegistrationFormSection() {
     }
   };
 
+  const GOOGLE_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.childName || !formData.whatsapp) {
@@ -64,7 +67,10 @@ export default function RegistrationFormSection() {
 
     setIsSubmitting(true);
 
-    // Simulate submission
+    // Redirect user to the official Google Form for registration
+    window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
+
+    // Simulate submission & voting card generation
     setTimeout(() => {
       setIsSubmitting(false);
       const generatedId = `KFW-LKO-${Math.floor(1000 + Math.random() * 9000)}`;
@@ -92,7 +98,7 @@ export default function RegistrationFormSection() {
 
   const handleShareWhatsApp = () => {
     if (!submittedData) return;
-    const shareText = `🌟 Vote for ${submittedData.childName} in Runway Kids Fashion Week 2026 (IEM × AdOnMo)! Contestant ID: ${submittedData.id}. Support with your Likes and Shares for the Wild Card Finale Entry!`;
+    const shareText = `Vote for ${submittedData.childName} in Runway Kids Fashion Week 2026 (IEM × AdOnMo)! Contestant ID: ${submittedData.id}. Support with your Likes and Shares for the Wild Card Finale Entry!`;
     const url = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
     window.open(url, "_blank");
   };
@@ -102,19 +108,26 @@ export default function RegistrationFormSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
-            CONTESTANT NOMINATION &amp; VOTING CARD
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="max-w-3xl">
+            <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
+              CONTESTANT NOMINATION &amp; VOTING CARD
+            </div>
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
+              Register Child &amp; Generate Voting Card
+            </h2>
+            <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
+              Preview your child&apos;s <strong className="text-charcoal font-semibold">Social Media Voting Creative</strong> below and complete your official registration on our Google Form!
+            </p>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
-            Register Child &amp; Generate Voting Card
-          </h2>
-          <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
-            Fill in the participant details below. As you enter the information, your child&apos;s 
-            official <strong className="text-charcoal font-semibold">Social Media Voting Creative</strong> will 
-            generate in real-time on the right. Submit to register for both the physical audition and 
-            digital wild card voting!
-          </p>
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-6 py-3.5 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded-lg shadow-sm transition-colors"
+          >
+            Fill Official Registration Form
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -546,7 +559,7 @@ export default function RegistrationFormSection() {
                   onClick={handleShareWhatsApp}
                   className="w-full py-3.5 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
                 >
-                  Share on WhatsApp for Social Votes &rarr;
+                  Share on WhatsApp for Social Votes
                 </button>
                 <button
                   onClick={() => setSubmittedData(null)}

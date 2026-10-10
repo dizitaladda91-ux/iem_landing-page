@@ -128,10 +128,12 @@ export default function FashionOnWheelsSection() {
               {/* Action */}
               <div className="pt-2">
                 <a
-                  href="#register"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full block py-3.5 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
                 >
-                  Join the Runway Movement &rarr;
+                  Join the Runway Movement
                 </a>
               </div>
 

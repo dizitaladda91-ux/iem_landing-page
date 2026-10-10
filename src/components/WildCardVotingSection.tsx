@@ -166,10 +166,12 @@ export default function WildCardVotingSection() {
               </p>
             </div>
             <a
-              href="#register"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="self-start sm:self-auto w-full sm:w-auto text-center px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
             >
-              Get Your Child Listed &rarr;
+              Get Your Child Listed
             </a>
           </div>
 

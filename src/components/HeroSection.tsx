@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import HeroGalleryCarousel from "@/components/HeroGalleryCarousel";
 
 export default function HeroSection() {
   // Live Countdown state
@@ -34,7 +33,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-surface py-16 sm:py-24 border-b border-border-pink overflow-hidden">
+    <section className="relative bg-surface pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-20 border-b border-border-pink overflow-hidden">
       {/* Background architectural grid lines - Clean & elegant, no gradients */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
         <div className="h-full w-full border-x border-border-pink max-w-7xl mx-auto flex justify-between">
@@ -45,39 +44,36 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
+        <div className="grid grid-cols-1 items-start gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
           
           {/* Left Column: Editorial Headline & Actions */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             
             {/* Super Header Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider text-pink-dark max-w-full">
-              <span className="w-2 h-2 rounded-full bg-pink-primary animate-ping"></span>
-              <span className="leading-relaxed">OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-[9px] sm:text-xs font-bold uppercase tracking-wider text-pink-dark max-w-full">
+              <span className="w-2 h-2 shrink-0 rounded-full bg-pink-primary animate-ping"></span>
+              <span className="leading-relaxed truncate sm:whitespace-normal">OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION</span>
             </div>
 
             {/* Main Headline */}
-            <div className="space-y-3">
-              <p className="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.18em] sm:tracking-[0.25em] text-pink-primary leading-relaxed">
+            <div className="space-y-2.5 sm:space-y-3">
+              <p className="text-[9px] sm:text-xs font-extrabold uppercase tracking-[0.14em] sm:tracking-[0.25em] text-pink-primary leading-relaxed">
                 INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
               </p>
 
               <div className="relative inline-block">
-                <div className="text-[3.4rem] font-black leading-none tracking-[-0.06em] text-transparent sm:text-[5.2rem] lg:text-[7rem]">
+                <div className="text-[2.9rem] sm:text-[4.8rem] lg:text-[5.6rem] xl:text-[6.8rem] font-black leading-none tracking-[-0.06em] text-transparent">
                   <span className="poster-title inline-block text-pink-primary drop-shadow-[0_8px_0_rgba(154,31,83,0.35)]">
                     Runway
                   </span>
                 </div>
-                <div className="pointer-events-none absolute -right-3 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/90 p-2 text-xl shadow-lg sm:flex">
-                  <span aria-hidden="true">👑</span>
-                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
-                <span className="font-serif italic text-2xl font-bold text-pink-primary leading-none sm:text-4xl">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <span className="font-serif italic text-xl sm:text-3xl lg:text-4xl font-bold text-pink-primary leading-none">
                   Kids&apos;
                 </span>
-                <span className="poster-subtitle inline-block rounded-full bg-white/80 px-3 py-1 font-serif text-xl font-black uppercase tracking-[0.04em] text-charcoal shadow-sm sm:text-3xl">
+                <span className="poster-subtitle inline-block rounded-full bg-white/80 px-3 py-1 font-serif text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-[0.04em] text-charcoal shadow-sm">
                   Fashion Week
                 </span>
               </div>
@@ -93,7 +89,9 @@ export default function HeroSection() {
             {/* Primary Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-1">
               <a
-                href="#register"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 sm:px-6 py-3 text-center text-xs font-extrabold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-sm hover:shadow active:scale-95"
               >
                 Nominate Your Child [Free Entry]
@@ -115,9 +113,9 @@ export default function HeroSection() {
                 </div>
               </div>
               <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
-                <div className="text-xl font-serif font-black text-pink-primary">₹21,000</div>
+                <div className="text-xl font-serif font-black text-pink-primary">₹11,000</div>
                 <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-muted">
-                  Cash Award
+                  Cash Prize + Gift Hamper
                 </div>
               </div>
               <div className="bg-white p-2.5 sm:p-3 rounded border border-border-pink">
@@ -136,10 +134,8 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Photo Gallery & Live Countdown */}
-          <div className="lg:col-span-5 relative space-y-5">
-            <HeroGalleryCarousel />
-
+          {/* Right Column: Live Countdown & Event Brief */}
+          <div className="lg:col-span-5 relative">
             <div className="bg-white border border-border-pink rounded-xl p-5 sm:p-6 shadow-lg relative">
               
               {/* Event Badge Header */}
@@ -222,10 +218,12 @@ export default function HeroSection() {
               {/* Instant Registration Jump CTA */}
               <div className="mt-6 pt-4 border-t border-border-pink">
                 <a
-                  href="#register"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full block py-3 text-center text-xs font-extrabold uppercase tracking-widest text-white bg-pink-primary hover:bg-pink-dark rounded transition-colors"
                 >
-                  Start Registration &amp; Generate Card &rarr;
+                  Start Registration &amp; Generate Card
                 </a>
               </div>
 

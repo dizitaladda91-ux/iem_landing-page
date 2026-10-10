@@ -29,7 +29,7 @@ export default function Header() {
               </span>
               <span className="mx-5 text-pink-primary font-black text-sm">&bull;</span>
               <span className="text-xs sm:text-xs font-bold uppercase tracking-wider text-charcoal">
-                FREE NOMINATION &bull; AUDITION AT JASHN REALTY (26 OCT) &bull; WIN ₹21,000 CASH
+                FREE NOMINATION &bull; AUDITION AT JASHN REALTY (26 OCT) &bull; CASH PRIZE ₹11,000 WITH GIFT HAMPER
               </span>
               <span className="mx-5 text-pink-primary font-black text-sm">&bull;</span>
             </div>
@@ -44,90 +44,83 @@ export default function Header() {
           {/* Brand Logo & Titles - Strict Typography, No Icons */}
           <a href="#" className="flex flex-col group min-w-0">
             <div className="flex items-center gap-2">
-              <span className="font-serif font-black text-xl sm:text-2xl tracking-[0.15em] sm:tracking-widest text-charcoal uppercase group-hover:text-pink-primary transition-colors">
-                RUNWAY
-              </span>
-              <span className="bg-pink-primary text-white text-[9px] sm:text-[10px] font-extrabold uppercase px-2 py-0.5 rounded tracking-widest">
-                KIDS
+              <span className="font-serif font-black text-xl sm:text-2xl tracking-[0.15em] sm:tracking-widest text-charcoal uppercase group-hover:text-pink-primary transition-colors leading-none">
+                Runway
               </span>
             </div>
-            <span className="text-[9px] sm:text-[11px] font-medium tracking-[0.12em] sm:tracking-widest text-charcoal-muted uppercase leading-tight">
-              Institute of Event Management × AdOnMo
+            <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.12em] sm:tracking-widest text-pink-primary uppercase leading-tight mt-1">
+              Kids Fashion Week 2026
             </span>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center space-x-7">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-7">
             <a
               href="#overview"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Overview
             </a>
             <a
               href="#categories"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Categories
             </a>
             <a
               href="#schedule"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Event Flow
             </a>
             <a
               href="#voting"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Wild Card Voting
             </a>
             <a
               href="#wheels"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Fashion on Wheels
             </a>
             <a
               href="#prizes"
-              className="text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider transition-colors"
+              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Prizes
             </a>
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-2.5 xl:space-x-3 shrink-0">
             <a
               href="#voting"
-              className="px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-pink-dark bg-surface border border-border-pink hover:bg-pink-soft transition-all rounded"
+              className="px-3.5 xl:px-4 py-2.5 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-pink-dark bg-surface border border-border-pink hover:bg-pink-soft transition-all rounded whitespace-nowrap"
             >
               View Voting
             </a>
             <a
-              href="#register"
-              className="px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-sm hover:shadow"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 xl:px-5 py-2.5 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-sm hover:shadow whitespace-nowrap"
             >
               Nominate Child
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle - Strict Typography, No Icons */}
           <div className="flex lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border-pink bg-surface text-charcoal transition hover:bg-pink-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-primary"
+              className="flex h-10 px-3 items-center justify-center rounded-lg border border-border-pink bg-surface text-[11px] font-extrabold uppercase tracking-wider text-charcoal transition hover:bg-pink-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-primary"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
             >
-              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-                {mobileMenuOpen ? (
-                  <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                ) : (
-                  <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                )}
-              </svg>
+              {mobileMenuOpen ? "Close" : "Menu"}
             </button>
           </div>
         </div>
@@ -180,7 +173,9 @@ export default function Header() {
           </a>
           <div className="pt-2 flex flex-col gap-2">
             <a
-              href="#register"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="text-center py-3 text-xs font-bold uppercase tracking-wider text-white bg-pink-primary rounded"
             >
@@ -206,7 +201,9 @@ export default function Header() {
             <span className="block text-[10px] text-charcoal-muted">Finale · 14 Nov</span>
           </div>
           <a
-            href="#register"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="rounded-lg bg-pink-primary px-5 py-3 text-center text-[11px] font-extrabold uppercase tracking-wider text-white shadow-sm transition hover:bg-pink-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-primary"
           >
