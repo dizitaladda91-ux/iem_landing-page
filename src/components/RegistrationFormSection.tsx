@@ -88,7 +88,7 @@ export default function RegistrationFormSection() {
           particleCount: 100,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ["#E11D48", "#F472B6", "#FBCFE8", "#9F1239", "#FFFFFF"],
+          colors: ["#112266", "#D4AF37", "#F6E29C", "#0A1440", "#FFFFFF"],
         });
       } catch {
         // fallback if canvas not available

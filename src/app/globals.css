@@ -4,12 +4,13 @@
 
 :root {
   --bg-primary: #FFFFFF;
-  --bg-surface: #FFF5F7;
-  --bg-card: #FDF2F4;
-  --border-soft: #F8D5DE;
-  --text-main: #1C1917;
-  --text-muted: #57534E;
-  --pink-accent: #E11D48;
+  --bg-surface: #F4F7FC;
+  --bg-card: #EDF2FA;
+  --border-soft: #CBD5E8;
+  --text-main: #0B132B;
+  --text-muted: #475569;
+  --pink-accent: #112266;
+  --gold-accent: #D4AF37;
 }
 
 * {
@@ -24,9 +25,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(255, 214, 227, 0.7), transparent 30%),
-    linear-gradient(180deg, #fff9fb 0%, #ffffff 12%, #fffdfd 100%);
-  color: #1C1917;
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.14), transparent 32%),
+    linear-gradient(180deg, #F4F7FC 0%, #FFFFFF 15%, #F8FAFC 100%);
+  color: #0B132B;
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
@@ -53,7 +54,7 @@ svg {
 }
 
 .runway-hero-glow {
-  background: radial-gradient(circle, rgba(255, 18, 131, 0.38), rgba(255, 255, 255, 0) 60%);
+  background: radial-gradient(circle, rgba(17, 34, 102, 0.35), rgba(212, 175, 55, 0.15) 60%);
   filter: blur(34px);
   transform: scale(1.18);
   opacity: 0.9;
@@ -64,26 +65,26 @@ svg {
   width: 10px;
   height: 10px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 32px rgba(255, 130, 188, 0.65);
+  background: rgba(246, 226, 156, 0.95);
+  box-shadow: 0 0 18px rgba(246, 226, 156, 0.9), 0 0 32px rgba(212, 175, 55, 0.75);
   animation: sparkle 3.2s ease-in-out infinite;
 }
 
 .poster-title {
-  font-family: var(--font-inter), sans-serif;
-  letter-spacing: -0.08em;
-  text-shadow: 0 4px 0 rgba(255, 255, 255, 0.4), 0 10px 30px rgba(225, 29, 72, 0.22);
-  background: linear-gradient(180deg, #ff5ca7 0%, #ef1d72 40%, #c50b64 100%);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 18px rgba(17, 34, 102, 0.18);
+  background: linear-gradient(180deg, #1B338B 0%, #112266 55%, #091238 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transform: rotate(-2deg);
 }
 
 .poster-subtitle {
   position: relative;
-  border: 1px solid rgba(225, 29, 72, 0.2);
-  background: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid #D4AF37;
+  background: linear-gradient(90deg, #0A1440 0%, #162B75 50%, #0A1440 100%);
+  color: #FFFFFF;
 }
 
 .sparkle-one {
@@ -243,29 +244,29 @@ svg {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFF5F7;
+  background: #F4F7FC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #F8B4C4;
+  background: #94A3B8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E11D48;
+  background: #112266;
 }
 
 /* Subtle border utility */
 .card-border {
-  border: 1px solid #F8D5DE;
+  border: 1px solid #CBD5E8;
 }
 
 .card-border-active {
-  border: 1.5px solid #E11D48;
+  border: 1.5px solid #D4AF37;
 }
 
 /* Smooth selection */
 ::selection {
-  background-color: #FCE7F3;
-  color: #9F1239;
+  background-color: #E0E8F7;
+  color: #0A1440;
 }
 
 @media (prefers-reduced-motion: reduce) {

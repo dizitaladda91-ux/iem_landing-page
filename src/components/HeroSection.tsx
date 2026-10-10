@@ -50,32 +50,41 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             
             {/* Super Header Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-border-pink rounded-full text-[9px] sm:text-xs font-bold uppercase tracking-wider text-pink-dark max-w-full">
-              <span className="w-2 h-2 shrink-0 rounded-full bg-pink-primary animate-ping"></span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-gold/70 rounded-full text-[9px] sm:text-xs font-bold uppercase tracking-wider text-pink-primary max-w-full shadow-sm">
+              <span className="w-2 h-2 shrink-0 rounded-full bg-gold animate-ping"></span>
               <span className="leading-relaxed truncate sm:whitespace-normal">OFFICIAL NOMINATIONS OPEN — LUCKNOW EDITION</span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Headline (Catalog Style: Jashn Realty Presents Runway Kids Fashion Week) */}
             <div className="space-y-2.5 sm:space-y-3">
-              <p className="text-[9px] sm:text-xs font-extrabold uppercase tracking-[0.14em] sm:tracking-[0.25em] text-pink-primary leading-relaxed">
-                INSTITUTE OF EVENT MANAGEMENT &amp; ADONMO PRESENT
-              </p>
+              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-black uppercase tracking-[0.18em] text-pink-primary">
+                <span>JASHN <span className="text-gold-dark">|</span> REALTY PRESENTS</span>
+                <span className="text-charcoal-muted text-[10px] sm:text-xs font-bold tracking-[0.14em]">
+                  &bull; IEM &times; ADONMO
+                </span>
+              </div>
 
               <div className="relative inline-block">
-                <div className="text-[2.9rem] sm:text-[4.8rem] lg:text-[5.6rem] xl:text-[6.8rem] font-black leading-none tracking-[-0.06em] text-transparent">
-                  <span className="poster-title inline-block text-pink-primary drop-shadow-[0_8px_0_rgba(154,31,83,0.35)]">
+                <div className="text-[3.2rem] sm:text-[5rem] lg:text-[5.8rem] xl:text-[6.8rem] font-serif font-bold leading-none tracking-tight text-transparent">
+                  <span className="poster-title inline-block">
                     Runway
                   </span>
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                <span className="font-serif italic text-xl sm:text-3xl lg:text-4xl font-bold text-pink-primary leading-none">
-                  Kids&apos;
+              <div className="pt-0.5">
+                <span className="poster-subtitle inline-block rounded-full px-4 sm:px-6 py-1.5 font-serif text-xs sm:text-lg lg:text-xl font-extrabold uppercase tracking-[0.18em] text-white shadow-md">
+                  Kids Fashion Week 2026
                 </span>
-                <span className="poster-subtitle inline-block rounded-full bg-white/80 px-3 py-1 font-serif text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-[0.04em] text-charcoal shadow-sm">
-                  Fashion Week
-                </span>
+              </div>
+
+              <div className="pt-1 space-y-0.5">
+                <div className="font-serif text-sm sm:text-lg font-extrabold uppercase tracking-[0.2em] text-pink-primary">
+                  Big Dreams &bull; Little Steps
+                </div>
+                <div className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-gold-dark">
+                  A Premium Kids Fashion &amp; Lifestyle Event
+                </div>
               </div>
             </div>
 

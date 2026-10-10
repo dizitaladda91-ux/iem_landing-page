@@ -64,21 +64,21 @@ export default function HeroGalleryCarousel() {
     >
       {/* Decorative subtle background glow & rotating circular orbit rings */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
-        <div className="w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] lg:w-[560px] lg:h-[560px] rounded-full border border-dashed border-pink-primary/25 orbit-ring-spin flex items-center justify-between">
-          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -ml-1.5 rounded-full bg-pink-primary shadow-[0_0_12px_#E11D48]" />
-          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -mr-1.5 rounded-full bg-pink-primary shadow-[0_0_12px_#E11D48]" />
+        <div className="w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] lg:w-[560px] lg:h-[560px] rounded-full border border-dashed border-gold/50 orbit-ring-spin flex items-center justify-between">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -ml-1.5 rounded-full bg-gold shadow-[0_0_12px_#D4AF37]" />
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 -mr-1.5 rounded-full bg-pink-primary shadow-[0_0_12px_#112266]" />
         </div>
-        <div className="absolute w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[420px] rounded-full bg-pink-soft/60 blur-3xl" />
+        <div className="absolute w-[200px] h-[200px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[420px] rounded-full bg-pink-soft/70 blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface text-pink-dark border border-border-pink text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full mb-3">
-            <span className="w-2 h-2 rounded-full bg-pink-primary animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-surface text-pink-primary border border-gold/60 text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+            <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
             <span>360° RUNWAY SPOTLIGHT GALLERY</span>
           </div>
-          <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
+          <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-extrabold text-pink-primary uppercase tracking-tight">
             Shining Stars on the Runway
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-charcoal-muted leading-relaxed px-2">
@@ -107,7 +107,7 @@ export default function HeroGalleryCarousel() {
                   style={{
                     transform: `rotateY(${angle}deg) translateZ(var(--ring-radius))`,
                   }}
-                  className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white bg-pink-soft shadow-[0_20px_50px_-15px_rgba(159,18,57,0.45)] transition-transform duration-300 hover:scale-105"
+                  className="absolute inset-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-gold bg-pink-soft shadow-[0_20px_50px_-15px_rgba(17,34,102,0.45)] transition-transform duration-300 hover:scale-105"
                 >
                   <Image
                     src={slide.image}
