@@ -4,6 +4,7 @@ import React from "react";
 
 export default function AnnouncementTicker() {
   const items = [
+    "JASHN REALTY PRESENTS RUNWAY KIDS FASHION WEEK 2026",
     "FREE NOMINATIONS OPEN (14–24 OCT)",
     "MEGA AUDITION AT JASHN REALTY (26 OCT)",
     "PRESS & DIGITAL MEDIA MEET (27 OCT)",

@@ -22,10 +22,10 @@ export default function Header() {
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="flex items-center mx-4 sm:mx-6 shrink-0">
               <span className="inline-block px-2 py-0.5 bg-white text-pink-primary border border-border-pink rounded mr-2.5 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-                LUCKNOW 2026
+                JASHN REALTY &bull; LUCKNOW 2026
               </span>
               <span className="text-xs sm:text-xs font-bold uppercase tracking-wider text-pink-dark">
-                OFFICIAL REGISTRATIONS &amp; SOCIAL VOTING OPEN — FINALE ON CHILDREN&apos;S DAY, 14TH NOV
+                JASHN REALTY PRESENTS RUNWAY KIDS FASHION WEEK 2026 — OFFICIAL REGISTRATIONS &amp; SOCIAL VOTING OPEN — FINALE ON 14TH NOV
               </span>
               <span className="mx-5 text-pink-primary font-black text-sm">&bull;</span>
               <span className="text-xs sm:text-xs font-bold uppercase tracking-wider text-charcoal">
@@ -40,64 +40,65 @@ export default function Header() {
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between gap-4 xl:gap-8 h-16 sm:h-20">
           {/* Brand Logo & Titles - Strict Typography, No Icons */}
-          <a href="#" className="flex flex-col group min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="font-serif font-black text-xl sm:text-2xl tracking-[0.15em] sm:tracking-widest text-charcoal uppercase group-hover:text-pink-primary transition-colors leading-none">
-                Runway
-              </span>
-            </div>
-            <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.12em] sm:tracking-widest text-pink-primary uppercase leading-tight mt-1">
+          <a href="#" className="flex flex-col group shrink-0">
+            <span className="text-[9px] sm:text-[10px] font-black tracking-[0.14em] text-charcoal uppercase leading-none whitespace-nowrap mb-0.5">
+              Jashn <span className="text-gold-dark">|</span> Realty Presents
+            </span>
+            <span className="font-serif font-black text-lg sm:text-2xl tracking-[0.14em] text-pink-primary uppercase leading-none whitespace-nowrap">
+              Runway
+            </span>
+            <span className="text-[9px] sm:text-[10px] font-extrabold tracking-[0.1em] text-gold-dark uppercase leading-tight mt-0.5 whitespace-nowrap">
               Kids Fashion Week 2026
             </span>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-7">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6">
             <a
               href="#overview"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Overview
             </a>
             <a
               href="#categories"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Categories
             </a>
             <a
               href="#schedule"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Event Flow
             </a>
             <a
               href="#voting"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Wild Card Voting
             </a>
             <a
               href="#wheels"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Fashion on Wheels
             </a>
             <a
               href="#prizes"
-              className="text-xs xl:text-sm font-semibold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
+              className="text-[11px] xl:text-xs font-bold text-charcoal hover:text-pink-primary uppercase tracking-wider whitespace-nowrap transition-colors"
             >
               Prizes
             </a>
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden md:flex items-center space-x-2.5 xl:space-x-3 shrink-0">
+          <div className="hidden md:flex items-center gap-2.5 xl:gap-3 shrink-0">
             <a
               href="#voting"
-              className="px-3.5 xl:px-4 py-2.5 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-pink-dark bg-surface border border-border-pink hover:bg-pink-soft transition-all rounded whitespace-nowrap"
+              className="px-3.5 xl:px-4 py-2 text-[11px] font-extrabold uppercase tracking-wider text-pink-primary bg-surface border border-gold hover:bg-pink-soft transition-all rounded-md whitespace-nowrap shadow-sm"
             >
               View Voting
             </a>
@@ -105,7 +106,7 @@ export default function Header() {
               href="https://docs.google.com/forms/d/e/1FAIpQLScLhiYtE6aWKlI-T3tou7OzfVQVucW4uxHgf8Q7P5bLI4JKLw/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 xl:px-5 py-2.5 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-white bg-pink-primary hover:bg-pink-dark transition-all rounded shadow-sm hover:shadow whitespace-nowrap"
+              className="px-4 xl:px-5 py-2 text-[11px] font-extrabold uppercase tracking-wider text-white bg-pink-primary border border-pink-primary hover:bg-pink-dark transition-all rounded-md shadow-sm whitespace-nowrap"
             >
               Nominate Child
             </a>

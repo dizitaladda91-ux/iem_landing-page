@@ -13,16 +13,19 @@ export default function Footer() {
           {/* Col 1: Brand & Presentation */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex flex-col">
-              <span className="font-serif font-black text-2xl tracking-widest text-charcoal uppercase leading-none">
+              <span className="text-[10px] font-black uppercase tracking-[0.18em] text-charcoal mb-1">
+                Jashn <span className="text-gold-dark">|</span> Realty Presents
+              </span>
+              <span className="font-serif font-black text-2xl tracking-widest text-pink-primary uppercase leading-none">
                 Runway
               </span>
-              <span className="text-xs font-extrabold uppercase tracking-widest text-pink-primary mt-1">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold-dark mt-1">
                 Kids Fashion Week 2026
               </span>
             </div>
             
             <p className="text-xs text-charcoal-muted leading-relaxed max-w-sm">
-              Runway Kids Fashion Week is organized by the <strong className="text-charcoal font-semibold">Institute of Event Management (IEM)</strong> in partnership with <strong className="text-charcoal font-semibold">AdOnMo</strong> to discover, empower, and celebrate youth talent across India.
+              <strong className="text-charcoal font-semibold">Jashn Realty Presents Runway Kids Fashion Week 2026</strong> is organized in association with the <strong className="text-charcoal font-semibold">Institute of Event Management (IEM)</strong> and <strong className="text-charcoal font-semibold">AdOnMo</strong> to discover, empower, and celebrate youth talent across India.
             </p>
 
             <div className="pt-2">
@@ -30,7 +33,7 @@ export default function Footer() {
                 OFFICIAL MOTTO
               </span>
               <span className="font-serif italic text-sm text-charcoal font-semibold">
-                &ldquo;Unlock Your Dream &bull; Tiny Trendsetters, Big Runway Dreams!&rdquo;
+                &ldquo;Big Dreams, Little Steps &bull; Tiny Trendsetters, Big Runway Dreams!&rdquo;
               </span>
             </div>
           </div>
@@ -148,7 +151,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-charcoal-muted gap-4">
           <div>
-            &copy; {new Date().getFullYear()} Runway Kids Fashion Week &bull; Institute of Event Management &amp; AdOnMo. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Jashn Realty Presents Runway Kids Fashion Week 2026 &bull; Institute of Event Management &amp; AdOnMo. All Rights Reserved.
           </div>
           <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider">
             <a href="#rules" className="hover:text-pink-primary">Guidelines</a>

@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "RUNWAY - Kids Fashion Week 2026 | IEM & AdOnMo",
+  title: "Jashn Realty Presents RUNWAY - Kids Fashion Week 2026 | IEM & AdOnMo",
   description:
-    "Official Registration & Voting Portal for Runway - Kids Fashion Week. Presented by Institute of Event Management & AdOnMo in Lucknow. Register your child today!",
+    "Official Registration & Voting Portal for Jashn Realty Presents Runway - Kids Fashion Week 2026. Presented by Jashn Realty, Institute of Event Management & AdOnMo in Lucknow.",
 };
 
 export default function RootLayout({

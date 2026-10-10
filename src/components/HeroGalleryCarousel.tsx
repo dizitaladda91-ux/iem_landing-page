@@ -76,13 +76,13 @@ export default function HeroGalleryCarousel() {
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-surface text-pink-primary border border-gold/60 text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full mb-3">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span>360° RUNWAY SPOTLIGHT GALLERY</span>
+            <span>JASHN REALTY PRESENTS &bull; 360° RUNWAY GALLERY</span>
           </div>
           <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl font-extrabold text-pink-primary uppercase tracking-tight">
-            Shining Stars on the Runway
+            Runway Kids Fashion Week 2026
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-charcoal-muted leading-relaxed px-2">
-            Glimpses of our official categories from Runway Kids Fashion Week 2026. Tap or hover over the rotating circle to pause and inspect.
+            Glimpses of our official categories from <strong className="text-pink-primary">Jashn Realty Presents Runway Kids Fashion Week 2026</strong>. Tap or hover over the rotating circle to pause and inspect.
           </p>
         </div>
 

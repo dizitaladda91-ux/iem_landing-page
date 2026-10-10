@@ -90,7 +90,7 @@ export default function PrizesSection() {
               </div>
 
               <div className="mt-6 pt-4 border-t border-border-pink text-[11px] font-bold uppercase tracking-wider text-charcoal">
-                OFFICIAL RUNWAY 2026 TITLE
+                JASHN REALTY PRESENTS RUNWAY 2026
               </div>
             </div>
           ))}

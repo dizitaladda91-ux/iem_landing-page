@@ -98,7 +98,7 @@ export default function RegistrationFormSection() {
 
   const handleShareWhatsApp = () => {
     if (!submittedData) return;
-    const shareText = `Vote for ${submittedData.childName} in Runway Kids Fashion Week 2026 (IEM × AdOnMo)! Contestant ID: ${submittedData.id}. Support with your Likes and Shares for the Wild Card Finale Entry!`;
+    const shareText = `Vote for ${submittedData.childName} in Jashn Realty Presents Runway Kids Fashion Week 2026 (IEM × AdOnMo)! Contestant ID: ${submittedData.id}. Support with your Likes and Shares for the Wild Card Finale Entry!`;
     const url = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
     window.open(url, "_blank");
   };
@@ -111,13 +111,13 @@ export default function RegistrationFormSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
             <div className="inline-block px-3 py-1 bg-surface text-pink-dark border border-border-pink text-xs font-bold uppercase tracking-wider rounded mb-3">
-              CONTESTANT NOMINATION &amp; VOTING CARD
+              JASHN REALTY PRESENTS &bull; CONTESTANT NOMINATION
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal uppercase tracking-tight">
               Register Child &amp; Generate Voting Card
             </h2>
             <p className="mt-2 text-sm sm:text-base text-charcoal-muted leading-relaxed">
-              Preview your child&apos;s <strong className="text-charcoal font-semibold">Social Media Voting Creative</strong> below and complete your official registration on our Google Form!
+              Preview your child&apos;s <strong className="text-charcoal font-semibold">Social Media Voting Creative</strong> below and complete your official registration for <strong className="text-pink-primary font-semibold">Jashn Realty Presents Runway Kids Fashion Week 2026</strong> on our Google Form!
             </p>
           </div>
           <a
@@ -353,7 +353,7 @@ export default function RegistrationFormSection() {
                     className="mt-1 h-4 w-4 rounded border-border-pink text-pink-primary focus:ring-pink-primary"
                   />
                   <span className="text-xs text-charcoal-muted leading-relaxed">
-                    I confirm that the details provided are accurate and grant permission for my child to participate in the screening, rehearsals, media coverage, and social media voting of Runway Kids Fashion Week 2026.
+                    I confirm that the details provided are accurate and grant permission for my child to participate in the screening, rehearsals, media coverage, and social media voting of <strong className="text-charcoal font-semibold">Jashn Realty Presents Runway Kids Fashion Week 2026</strong>.
                   </span>
                 </label>
               </div>
@@ -389,6 +389,9 @@ export default function RegistrationFormSection() {
               
               {/* Card Header */}
               <div className="border-b-2 border-border-pink pb-3 mb-3 text-center">
+                <div className="text-[9px] font-black tracking-[0.2em] text-pink-primary uppercase mb-0.5">
+                  JASHN <span className="text-gold-dark">|</span> REALTY PRESENTS
+                </div>
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <span className="font-serif font-black text-xl tracking-widest text-charcoal uppercase">
                     RUNWAY
@@ -401,7 +404,7 @@ export default function RegistrationFormSection() {
                   KIDS FASHION WEEK &bull; OFFICIAL VOTING PASS
                 </div>
                 <div className="text-[9px] font-semibold tracking-wider text-pink-primary uppercase mt-0.5">
-                  IEM × ADONMO LUCKNOW
+                  JASHN REALTY &bull; IEM &times; ADONMO LUCKNOW
                 </div>
               </div>
 
@@ -497,7 +500,7 @@ export default function RegistrationFormSection() {
                   Share this creative with friends &amp; family. Highest Likes, Shares &amp; Comments qualify directly.
                 </div>
                 <div className="inline-block text-[9px] font-bold uppercase tracking-widest text-charcoal-muted bg-surface border border-border-pink px-3 py-1 rounded">
-                  VERIFIED BY INSTITUTE OF EVENT MANAGEMENT
+                  JASHN REALTY PRESENTS RUNWAY KIDS FASHION WEEK 2026
                 </div>
               </div>
 
@@ -514,13 +517,13 @@ export default function RegistrationFormSection() {
               
               <div className="text-center space-y-3 pb-6 border-b border-border-pink">
                 <span className="inline-block px-3 py-1 bg-pink-soft text-pink-primary border border-border-pink text-xs font-black uppercase tracking-widest rounded-full">
-                  NOMINATION SUCCESSFUL
+                  JASHN REALTY PRESENTS &bull; NOMINATION SUCCESSFUL
                 </span>
                 <h3 className="font-serif text-3xl font-black text-charcoal uppercase">
                   Welcome to Runway 2026!
                 </h3>
                 <p className="text-sm text-charcoal-muted">
-                  Your nomination for <strong className="text-charcoal">{submittedData.childName}</strong> has been registered successfully.
+                  Your nomination for <strong className="text-charcoal">{submittedData.childName}</strong> in <strong className="text-pink-primary">Jashn Realty Presents Runway Kids Fashion Week 2026</strong> has been registered successfully.
                 </p>
               </div>
 
